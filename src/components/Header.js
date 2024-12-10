@@ -1,35 +1,44 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-md py-4 px-6 flex justify-between items-center">
+    <header className="bg-white shadow-md py-8 px-6 flex justify-between items-center">
       {/* Logo Section */}
       <div className="flex items-center space-x-2">
-        <div className="text-blue-500 text-3xl font-bold">🅰</div>
-        <h1 className="text-lg font-bold text-gray-800">Saveoex</h1>
+        <Image
+          src="logo.svg"
+          alt="hero"
+          className="mx-auto max-w-full rounded-t-xl rounded-tr-xl"
+          width={100}
+          height={100}
+        />
       </div>
 
       {/* Desktop Navigation Links */}
-      <nav className="hidden md:flex items-center space-x-6">
-        <a href="#features" className="text-gray-700 hover:text-blue-500">
-          Features
+      <nav className="hidden md:flex items-center font-semibold space-x-6 ">
+        <a href="#features" className="text-gray-700  hover:text-primary">
+          Home
         </a>
-        <a href="#about" className="text-gray-700 hover:text-blue-500">
+        <a href="#about" className="text-gray-700 hover:text-primary">
           About
         </a>
-        <a href="#how-it-works" className="text-gray-700 hover:text-blue-500">
-          How It Works
+        <a href="#how-it-works" className="text-gray-700 hover:text-primary">
+          Pricing
         </a>
-        <a href="#support" className="text-gray-700 hover:text-blue-500">
-          Support
+        <a href="#support" className="text-gray-700 hover:text-primary">
+          Contact
         </a>
-        <div className="relative group">
-          <button className="text-gray-700 hover:text-blue-500 flex items-center">
-            Pages
+        <a href="#support" className="text-gray-700 hover:text-primary">
+          Vendor
+        </a>
+        {/* <div className="relative group">
+          <button className="text-gray-700 hover:text-primary flex items-center">
+            V
             <svg
               className="ml-1 w-4 h-4"
               fill="none"
@@ -45,7 +54,6 @@ export default function Header() {
               ></path>
             </svg>
           </button>
-          {/* Dropdown Menu */}
           <div className="absolute top-8 left-0 hidden group-hover:block bg-white shadow-lg rounded-md">
             <a
               href="#subpage1"
@@ -60,12 +68,12 @@ export default function Header() {
               Subpage 2
             </a>
           </div>
-        </div>
+        </div> */}
       </nav>
 
       {/* Action Buttons */}
       <div className="hidden md:flex items-center space-x-4">
-        <button className="text-gray-700 hover:text-blue-500">
+        {/* <button className="text-gray-700 hover:text-primary">
           <svg
             className="w-5 h-5"
             fill="none"
@@ -80,8 +88,8 @@ export default function Header() {
               d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a8 8 0 10-3.253 6.325"
             ></path>
           </svg>
-        </button>
-        <button className="text-gray-700 hover:text-blue-500">
+        </button> */}
+        <button className="text-gray-700 hover:text-primary">
           <svg
             className="w-5 h-5"
             fill="none"
@@ -97,20 +105,20 @@ export default function Header() {
             ></path>
           </svg>
         </button>
-        <a href="#signin" className="text-gray-700 hover:text-blue-500">
+        {/* <a href="#signin" className="text-gray-700 hover:text-primary">
           Sign In
         </a>
         <a
           href="#signup"
-          className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600"
+          className="bg-primary text-white py-2 px-4 rounded-md hover:bg-blue-600"
         >
           Sign Up
-        </a>
+        </a> */}
       </div>
 
       {/* Mobile Menu Button */}
       <button
-        className="md:hidden text-gray-700 hover:text-blue-500"
+        className="md:hidden text-gray-700 hover:text-primary"
         onClick={() => setIsOpen(!isOpen)}
       >
         <svg
@@ -164,7 +172,7 @@ export default function Header() {
           </a>
           <a
             href="#signup"
-            className="block px-4 py-2 text-blue-500 hover:bg-gray-100 font-bold"
+            className="block px-4 py-2 text-primary hover:bg-gray-100 font-bold"
           >
             Sign Up
           </a>

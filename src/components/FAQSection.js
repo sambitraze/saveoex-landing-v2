@@ -7,19 +7,29 @@ export default function FAQSection() {
 
   const faqs = [
     {
-      question: "Lorem ipsum dolor sit amet, consectetur?",
+      question: "What is Saveoex?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id feugiat augue, nec fringilla turpis.",
+        "Saveoex is a subscription-based platform that offers unlimited savings on local and national brands. For a low monthly fee, you can access exclusive discounts and deals .",
     },
     {
-      question: "Lorem ipsum dolor sit amet, consectetur?",
+      question: "How do I use Saveoex?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id feugiat augue, nec fringilla turpis.",
+        "Simply sign up for a subscription, explore our list of participating businesses, and show your Saveoex pass to enjoy instant savings .",
     },
     {
-      question: "Lorem ipsum dolor sit amet, consectetur?",
+      question: "Where can I use Saveoex?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id feugiat augue, nec fringilla turpis.",
+        "Saveoex partners with a wide range of businesses, from local stores to national chains, ensuring that you always have access to great deals, no matter where you are .",
+    },
+    {
+      question: "How much does Saveoex cost?",
+      answer:
+        "We offer several affordable subscription plans to fit your budget. Visit our pricing page for more details .",
+    },
+    {
+      question: "Can I cancel my subscription?",
+      answer:
+        "Yes, you can cancel your subscription at any time. We want you to enjoy the benefits of Saveoex with total flexibility .",
     },
   ];
 
@@ -32,12 +42,10 @@ export default function FAQSection() {
       <div className="container mx-auto px-6 md:px-12 lg:px-20">
         <div className="text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
-            Frequently Asked Questions
+            Any Questions? Answered
           </h2>
           <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-            convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam
-            ante in maximus.
+            Feel free to contact us for any other questions.
           </p>
         </div>
 

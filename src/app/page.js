@@ -20,13 +20,13 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Header Section */}
-      <header className="sticky top-0 z-50 bg-white">
+      <header className="sticky top-0 z-50 bg-white  px-16">
         <Header />
       </header>
 
       {/* Main Content */}
       <main className="flex-1">
-        <div className="container mx-auto px-6 md:px-12 lg:px-20 space-y-16">
+        <div className="container mx-auto space-y-16 px-16">
           {/* Hero Section */}
           <HeroSection />
 
@@ -37,10 +37,10 @@ export default function Home() {
           <AudienceSection />
 
           {/* AudienceReports Section */}
-          <AudienceReportsSection />
+          {/* <AudienceReportsSection /> */}
 
           {/* HowItWorks Section */}
-          <HowItWorksSection />
+          {/* <HowItWorksSection /> */}
 
           {/* HowItWorks Section */}
           <PricingSection />
@@ -58,10 +58,10 @@ export default function Home() {
           <FAQSection />
 
           {/* Blog Section */}
-          <BlogSection />
+          {/* <BlogSection /> */}
 
           {/* BrandLogo Section */}
-          <BrandLogosSection />
+          {/* <BrandLogosSection /> */}
 
           {/* BrandLogo Section */}
           <ContactUsSection />

@@ -1,26 +1,22 @@
 export default function Footer() {
   const footerLinks = [
     {
-      title: "Home",
-      links: ["Product", "Pricing", "Business", "Enterprise"],
-    },
-    {
       title: "About Us",
-      links: ["Company", "Leadership", "Careers", "Diversity"],
+      links: ["Home", "About", "Testimoial", "Pricing"],
     },
     {
       title: "Resources",
-      links: ["Andy Guide", "Forum", "Support", "App Directory"],
+      links: ["FAQ", "How Saveoex Works", "Contact"],
     },
-    {
-      title: "Tutorial",
-      links: [
-        "10 Leadership Styles",
-        "Executive Summary Tips",
-        "Prevent Team Burnout",
-        "What are OKRs?",
-      ],
-    },
+    // {
+    //   title: "Tutorial",
+    //   links: [
+    //     "10 Leadership Styles",
+    //     "Executive Summary Tips",
+    //     "Prevent Team Burnout",
+    //     "What are OKRs?",
+    //   ],
+    // },
   ];
 
   return (
@@ -31,15 +27,15 @@ export default function Footer() {
           <div className="md:col-span-2">
             <h2 className="flex items-center text-2xl font-bold text-gray-800">
               <img
-                src="/logo.png"
+                src="/logo.svg"
                 alt="Appline Logo"
-                className="w-8 h-8 mr-2"
+                className="w-18 h-8 mr-2"
               />
-              Appline
+              {/* Appline */}
             </h2>
             <p className="mt-4 text-gray-600 max-w-sm">
-              This membership will help you plan and execute a variety of
-              projects.
+              Unlock Endless Savings with Saveoex! Starting at just Rs 9 per
+              month.
             </p>
           </div>
 
