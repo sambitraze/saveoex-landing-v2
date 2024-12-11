@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 export default function AppScreenshotsSection() {
   const screenshots = [
     { src: "/0.png", alt: "Screenshot 0" },
-    { src: "/1.png", alt: "Screenshot 1" },
+    // { src: "/1.png", alt: "Screenshot 1" },
     { src: "/2.png", alt: "Screenshot 2" },
     { src: "/3.png", alt: "Screenshot 3" },
     { src: "/4.png", alt: "Screenshot 4" },

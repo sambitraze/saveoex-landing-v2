@@ -8,7 +8,7 @@ export default function PricingSection() {
   const plans = [
     {
       id: "1",
-      unit_amount: 29 * 100,
+      unit_amount: 29,
       nickname: "1 Month",
       offers: [
         "All Vendor offers",
@@ -19,7 +19,7 @@ export default function PricingSection() {
     },
     {
       id: "2",
-      unit_amount: 69 * 100,
+      unit_amount: 69,
       nickname: "3 Months",
       offers: [
         "All Vendor offers",
@@ -30,7 +30,7 @@ export default function PricingSection() {
     },
     {
       id: "3",
-      unit_amount: 99 * 100,
+      unit_amount: 99,
       nickname: "6 Months",
       offers: [
         "All Vendor offers",
@@ -41,7 +41,7 @@ export default function PricingSection() {
     },
     {
       id: "4",
-      unit_amount: 199 * 100,
+      unit_amount: 199,
       nickname: "12 Months",
       offers: [
         "All Vendor offers",
@@ -59,9 +59,9 @@ export default function PricingSection() {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
             Our Pricing Plans
           </h2>
-          <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+          {/* <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
             There are many variations of the subscription comming soon.
-          </p>
+          </p> */}
 
           {/* Toggle Button */}
           {/* <div className="mt-6 flex justify-center items-center space-x-4">

@@ -4,7 +4,7 @@ export default function TestimonialsSection() {
       name: "Shreyansh",
       role: "Customer",
       rating: 5,
-      feedback: `“Saveoexhas completely changed the way I shop! I&apos;m saving money on everything, from my morning coffee to weekend getaways.”`,
+      feedback: `“Saveoexhas completely changed the way I shop! I'm saving money on everything, from my morning coffee to weekend getaways.”`,
       image: "/user1.jpg",
     },
     {

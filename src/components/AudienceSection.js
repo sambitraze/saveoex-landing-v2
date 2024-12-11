@@ -18,18 +18,19 @@ export default function AudienceSection() {
             Empowering You to Live More, Spend Less
           </h2> */}
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-4">
-            Empowering You to Live More, Spend Less
+            Live More, Spend Less with Saveoex
           </h2>
           <p className="text-gray-600 text-lg mt-4">
-            We&apos;re more than just a discount platform &hypen; we&apos;re
-            your partner in living a fuller, richer life. Join us and let&apos;s
-            save together!
+            At Saveoex, we&apos;re more than just a discount platform,
+            we&apos;re your partner in achieving a fuller, richer life. Our
+            mission is simple: to transform the way you save, making amazing
+            deals accessible without straining your hard-earned money.
           </p>
           <p className="text-gray-600 text-lg mt-4">
-            At Saveoex, we believe that everyone deserves access to the best
-            deals without breaking the bank balance and your hard earn money.
-            Our mission is to revolutionize the way you save by providing a
-            simple, affordable subscription that unlocks a world of discounts.
+            With our affordable subscription, you unlock a world of exclusive
+            discounts and unbeatable offers. We believe everyone deserves the
+            freedom to enjoy life&apos;s best moments without worrying about the
+            cost. Join us today and let&apos;s save together!
           </p>
           {/* <div className="mt-8 space-y-6">
             <div className="flex items-center">
