@@ -158,7 +158,7 @@ export default function ContactUsSection() {
                 rows="4"
                 value={formData.message}
                 onChange={handleChange}
-                placeholder="Tell us about yourself"
+                placeholder="Enter Your Message"
                 className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
                 required
               ></textarea>

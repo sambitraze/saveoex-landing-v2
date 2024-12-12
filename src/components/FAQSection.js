@@ -40,7 +40,7 @@ export default function FAQSection() {
     {
       question: "How does Saveoex work?",
       answer:
-        "Saveoex operates on a subscription model, starting at an affordable ₹29 per month. Once you're subscribed, you can access discounts at our partner vendors without any monthly limitations.",
+        "Saveoex operates on a subscription model, starting at an affordable ₹9 per month. Once you're subscribed, you can access discounts at our partner vendors without any monthly limitations.",
     },
     {
       question: "Where can I use Saveoex?",
@@ -89,7 +89,7 @@ export default function FAQSection() {
     {
       question: "What subscription plans are available?",
       answer:
-        "Our subscription plans start at just ₹19 per month. More details about other plans and benefits can be found on our app.",
+        "Our subscription plans start at just ₹9 per month. More details about other plans and benefits can be found on our app.",
     },
     {
       question: "How do I contact Saveoex for support?",
@@ -122,7 +122,7 @@ export default function FAQSection() {
       <div className="container mx-auto px-6 md:px-12 lg:px-20">
         <div className="text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
-            Any Questions? Answered
+            Any Questions?
           </h2>
           <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
             Feel free to contact us for any other questions.
