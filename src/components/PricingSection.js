@@ -1,56 +1,33 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function PricingSection() {
-  const [isYearly, setIsYearly] = useState(false);
+  const [plans, setPlans] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  const plans = [
-    {
-      id: "1",
-      unit_amount: 29,
-      nickname: "1 Month",
-      offers: [
-        "All Vendor offers",
-        "1 Month access",
-        "Free updates",
-        "1 Months support",
-      ],
-    },
-    {
-      id: "2",
-      unit_amount: 69,
-      nickname: "3 Months",
-      offers: [
-        "All Vendor offers",
-        "3 Month access",
-        "Free updates",
-        "3 Months support",
-      ],
-    },
-    {
-      id: "3",
-      unit_amount: 99,
-      nickname: "6 Months",
-      offers: [
-        "All Vendor offers",
-        "6 Month access",
-        "Free updates",
-        "6 Months support",
-      ],
-    },
-    {
-      id: "4",
-      unit_amount: 199,
-      nickname: "12 Months",
-      offers: [
-        "All Vendor offers",
-        "12 Month access",
-        "Free updates",
-        "12 Months support",
-      ],
-    },
-  ];
+  useEffect(() => {
+    // Replace 'API_URL' with your actual API endpoint
+    const fetchPlans = async () => {
+      try {
+        const response = await fetch(
+          "https://api.saveoex.com/items/subscription_plans"
+        ); // Replace with actual API endpoint
+        if (!response.ok) {
+          throw new Error("Failed to fetch plans");
+        }
+        const data = await response.json();
+        console.log(data);
+        setPlans(data.data || []); // Adjust according to your API response structure
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPlans();
+  }, []);
 
   return (
     <section className="py-16 bg-gradient-to-b from-white to-pink-50">
@@ -79,56 +56,65 @@ export default function PricingSection() {
           </div> */}
         </div>
 
-        <div className="mt-12 grid gap-6 md:gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-          {plans.map((plan, index) => (
-            <div
-              key={index}
-              className={`bg-white shadow-md rounded-lg p-6 text-center hover:shadow-lg transition ${
-                plan.isPopular ? "border border-blue-500" : ""
-              }`}
-            >
-              <h3 className="text-xl font-semibold text-gray-800">
-                {plan.nickname}
-              </h3>
-              {plan.isPopular && (
-                <span className="block text-sm text-primary font-medium mt-2">
-                  Most popular
-                </span>
-              )}
-              <p className="text-gray-600 mt-2">{plan.description}</p>
-              <div className="text-gray-900 font-bold text-4xl mt-4">
-                ₹{plan.unit_amount}
-                {/* ${isYearly ? plan.yearlyPrice : plan.monthlyPrice} */}
-                {/* <span className="text-lg font-medium">
+        <div className="mt-12 grid gap-6 md:gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          {loading ? (
+            <section className="py-16 bg-gradient-to-b from-white to-pink-50">
+              <div className="container mx-auto px-6 md:px-12 lg:px-20">
+                <div className="text-center">
+                  <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
+                    Loading Pricing Plans...
+                  </h2>
+                </div>
+              </div>
+            </section>
+          ) : (
+            plans.map((plan, index) => (
+              <div
+                key={index}
+                className={`bg-white shadow-md rounded-lg p-6 text-center flex flex-col justify-between hover:shadow-lg transition ${
+                  plan.has_clickbait ? "border border-blue-500" : ""
+                }`}
+              >
+                <h3 className="text-xl font-semibold text-gray-800">
+                  {plan.title}
+                </h3>
+                <p
+                  className="text-gray-600 mt-2"
+                  dangerouslySetInnerHTML={{ __html: plan.description }}
+                ></p>
+                <div className="text-gray-900 font-bold text-4xl mt-4">
+                  ₹{plan.price}
+                  {/* ${isYearly ? plan.yearlyPrice : plan.monthlyPrice} */}
+                  {/* <span className="text-lg font-medium">
                   {" "}
                   / {isYearly ? "year" : "month"}
                 </span> */}
-              </div>
-              <ul className="mt-6 space-y-2 text-gray-600">
-                {plan.offers.map((feature, idx) => (
-                  <li
-                    key={idx}
-                    className="flex items-center justify-center space-x-2"
-                  >
-                    <svg
-                      className="w-5 h-5 text-green-500"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
+                </div>
+                {/* <ul className="mt-6 space-y-2 text-gray-600">
+                  {plan.offers.map((feature, idx) => (
+                    <li
+                      key={idx}
+                      className="flex items-center justify-center space-x-2"
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M5 13l4 4L19 7"
-                      ></path>
-                    </svg>
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              {/* <button
+                      <svg
+                        className="w-5 h-5 text-green-500"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M5 13l4 4L19 7"
+                        ></path>
+                      </svg>
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul> */}
+                {/* <button
                 className={`mt-6 py-2 px-4 rounded-lg font-medium text-white ${
                   plan.isPopular
                     ? "bg-primary hover:bg-blue-600"
@@ -137,8 +123,15 @@ export default function PricingSection() {
               >
                 Choose Plan
               </button> */}
-            </div>
-          ))}
+
+                {plan.has_clickbait && (
+                  <span className="block text-sm text-primary font-medium mt-2">
+                    {plan.clickbait_label}
+                  </span>
+                )}
+              </div>
+            ))
+          )}
         </div>
       </div>
     </section>

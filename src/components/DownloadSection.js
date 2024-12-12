@@ -32,8 +32,19 @@ export default function DownloadSection() {
 
         {/* Right Side: Image */}
         <div className="relative w-full lg:w-1/2 mt-12 lg:mt-0">
-          <div className="absolute -top-6 -left-10 bg-pink-100 rounded-full w-48 h-48"></div>
-          <img src="/0.png" alt="Download App" className="relative z-10 w-64" />
+          <div className="absolute -top-6 -left-10 bg-secondary rounded-full w-48 h-48"></div>
+          <div className="flex">
+            <img
+              src="/app.png"
+              alt="Download App"
+              className="relative z-10 w-64"
+            />
+            <img
+              src="/and.png"
+              alt="Download App"
+              className="relative z-10 w-64"
+            />
+          </div>
         </div>
       </div>
     </section>

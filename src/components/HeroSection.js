@@ -8,7 +8,7 @@ export default function HeroSection() {
             Save your expenses!
           </h2>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mt-4">
-            India's First Guaranteed
+            India&apos;s First Guaranteed
             <br />
             <span className="text-secondary">Discount App</span>
           </h1>
