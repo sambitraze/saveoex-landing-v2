@@ -83,7 +83,7 @@ export default function PricingSection() {
                   dangerouslySetInnerHTML={{ __html: plan.description }}
                 ></p>
                 <div className="text-gray-900 font-bold text-4xl mt-4">
-                  ₹{plan.price}
+                  ₹{plan.discounted_price}
                   {/* ${isYearly ? plan.yearlyPrice : plan.monthlyPrice} */}
                   {/* <span className="text-lg font-medium">
                   {" "}
