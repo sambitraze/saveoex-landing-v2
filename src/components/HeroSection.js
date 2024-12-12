@@ -22,8 +22,9 @@ export default function HeroSection() {
             >
               Download Now
             </a>
-            {/* <a
-              href="#demo"
+            <a
+              href="https://youtu.be/ZCk8xHbrNqU"
+              target="_blank"
               className="flex items-center text-gray-900 hover:text-secondary gap-4 border-dotted border-2 px-3 py-1 rounded-lg"
             >
               <svg
@@ -44,7 +45,7 @@ export default function HeroSection() {
                 <span className="text-sm font-semibold">Watch Demo</span>
                 <p className="text-xs text-gray-500">See how it works</p>
               </div>
-            </a> */}
+            </a>
           </div>
         </div>
 
