@@ -21,19 +21,23 @@ export default function Header() {
 
       {/* Desktop Navigation Links */}
       <nav className="hidden md:flex items-center font-semibold space-x-6 ">
-        <a href="#features" className="text-gray-700  hover:text-primary">
+        <a href="#home" className="text-gray-700  hover:text-primary">
           Home
         </a>
         <a href="#about" className="text-gray-700 hover:text-primary">
           About
         </a>
-        <a href="#how-it-works" className="text-gray-700 hover:text-primary">
+        <a href="#pricing" className="text-gray-700 hover:text-primary">
           Pricing
         </a>
-        <a href="#support" className="text-gray-700 hover:text-primary">
+        <a href="#contactus" className="text-gray-700 hover:text-primary">
           Contact
         </a>
-        <a href="#support" className="text-gray-700 hover:text-primary">
+        <a
+          href="https://dashboard.saveoex.com/"
+          target="_blank"
+          className="text-gray-700 hover:text-primary"
+        >
           Vendor
         </a>
         {/* <div className="relative group">

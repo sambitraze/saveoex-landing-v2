@@ -2,21 +2,21 @@ export default function Footer() {
   const footerLinks = [
     {
       title: "About Us",
-      links: ["Home", "About", "Testimoial", "Pricing"],
+      links: [
+        { name: "Home", hash: "#home" },
+        { name: "About", hash: "#about" },
+        { name: "Testimonial", hash: "#testimonials" },
+        { name: "Pricing", hash: "#pricing" },
+      ],
     },
     {
       title: "Resources",
-      links: ["FAQ", "How Saveoex Works", "Contact"],
+      links: [
+        { name: "FAQ", hash: "#faq" },
+        { name: "How Saveoex Works", hash: "#about" },
+        { name: "Contact", hash: "#contactus" },
+      ],
     },
-    // {
-    //   title: "Tutorial",
-    //   links: [
-    //     "10 Leadership Styles",
-    //     "Executive Summary Tips",
-    //     "Prevent Team Burnout",
-    //     "What are OKRs?",
-    //   ],
-    // },
   ];
 
   return (
@@ -49,10 +49,10 @@ export default function Footer() {
                 {section.links.map((link, idx) => (
                   <li key={idx}>
                     <a
-                      href="#"
+                      href={link.hash}
                       className="text-gray-600 hover:text-gray-800 transition"
                     >
-                      {link}
+                      {link.name}
                     </a>
                   </li>
                 ))}

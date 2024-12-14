@@ -33,7 +33,7 @@ export default function DownloadSection() {
         {/* Right Side: Image */}
         <div className="relative w-full lg:w-1/2 mt-12 lg:mt-0">
           <div className="absolute -top-6 -left-10 bg-secondary rounded-full w-48 h-48"></div>
-          <div className="flex">
+          <div className="flex flex-col md:flex-row">
             <img
               src="/app.png"
               alt="Download App"

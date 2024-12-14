@@ -3,8 +3,8 @@ export default function AudienceSection() {
     <section className="py-16 bg-gradient-to-b from-white to-blue-50">
       <div className="container mx-auto px-6 md:px-12 lg:px-20 flex flex-col lg:flex-row items-center lg:space-x-16">
         {/* Left Side: Image */}
-        <div className="relative w-full lg:w-1/2">
-          <div className="absolute -top-6 -left-10 bg-blue-100 rounded-lg w-48 h-48"></div>
+        <div className="md:relative w-full lg:w-1/2">
+          <div className="hidden md:block absolute -top-8 -left-10 bg-blue-100 rounded-lg w-48 h-48"></div>
           <img
             src="/logo.svg"
             alt="Audience Tracking"
