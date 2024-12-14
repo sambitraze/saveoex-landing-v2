@@ -145,10 +145,16 @@ export default function Header() {
       {isOpen && (
         <nav className="md:hidden absolute top-16 left-0 w-full bg-white shadow-md">
           <a
-            href="#features"
+            href="#home"
             className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
           >
-            Features
+            Home
+          </a>
+          <a
+            href="#pricing"
+            className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+          >
+            Pricing
           </a>
           <a
             href="#about"
@@ -157,28 +163,17 @@ export default function Header() {
             About
           </a>
           <a
-            href="#how-it-works"
+            href="#contactus"
             className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
           >
-            How It Works
+            Contact
           </a>
           <a
-            href="#support"
+            href="https://dashboard.saveoex.com/"
+            target="_blank"
             className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
           >
-            Support
-          </a>
-          <a
-            href="#signin"
-            className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-          >
-            Sign In
-          </a>
-          <a
-            href="#signup"
-            className="block px-4 py-2 text-primary hover:bg-gray-100 font-bold"
-          >
-            Sign Up
+            Vendor
           </a>
         </nav>
       )}
